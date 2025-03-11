@@ -6,7 +6,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-user',
-  imports: [RouterLink,SingleUserComponent,CommonModule,HttpClientModule,NgFor,UpperCasePipe,NgIf],
+  imports: [RouterLink,SingleUserComponent,HttpClientModule,NgFor,UpperCasePipe,NgIf],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
@@ -23,15 +23,14 @@ userName: string = '';
    this.create()
   }
   public create(){
-     this.userName = 'New User Created!';
-    console.log(this.userName);
-  // const apii = "https://fakestoreapi.com/products";
+   
+  const apii = "https://fakestoreapi.com/products";
  
-  // this.http.get(apii).subscribe((response:any)=>{
+  this.http.get(apii).subscribe((response:any)=>{
  
-    // this.product = response;
-    // console.log(this.product);
-  // })
+    this.product = response;
+    console.log(this.product);
+  })
 
   }
 
