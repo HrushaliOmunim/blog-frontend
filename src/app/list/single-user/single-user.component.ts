@@ -1,4 +1,4 @@
-import { Component,AfterViewInit,ViewChild } from '@angular/core';
+import { Component,AfterViewInit,ViewChild, EventEmitter, Output, Input } from '@angular/core';
 import { UserComponent } from '../user/user.component';
 
 @Component({
@@ -9,4 +9,16 @@ import { UserComponent } from '../user/user.component';
 })
 export class SingleUserComponent  {
  
+  // @Input() user!:any;
+  @Output() userCreated = new EventEmitter<any>();
+
+  singleusercreate(){
+    const newUserName = 'John Doe';
+    this.userCreated.emit(newUserName); 
+
+  }
+
+
+
+
 }

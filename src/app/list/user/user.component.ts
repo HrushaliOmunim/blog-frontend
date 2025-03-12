@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { Route, Router, RouterLink } from '@angular/router';
 import { SingleUserComponent } from '../single-user/single-user.component';
 import { CommonModule, NgFor, NgIf, UpperCasePipe } from '@angular/common';
@@ -32,6 +32,10 @@ userName: string = '';
     console.log(this.product);
   })
 
+  }
+
+  onUserCreated(newUserName: string): void {
+    console.log('User Created:', newUserName); 
   }
 
 }

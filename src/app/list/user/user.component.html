@@ -1,6 +1,6 @@
 <p>user works!</p>
-<a routerLink = 'singleUser' >singleuser</a>
-<div >
+
+<div>
     <table border="1">
         <thead>
             <tr>
@@ -19,6 +19,7 @@
             </tr>
           </tbody>
 </table>
-    
+<app-single-user (userCreated)="onUserCreated($event)"></app-single-user>   
+
 </div>
 

@@ -1,0 +1,21 @@
+<p>form works!</p>
+<div>
+<form [formGroup]="formdata" (ngSubmit)="showfromdata()">
+<label for="id"></label>
+    <input formControlName="id" id="id" placeholder="Enter your id " >
+    
+    <br>
+    <br>
+
+    <label for="username"></label>
+        <input formControlName="username" id="username" placeholder="enter your name">
+        <br>
+<br>
+        
+        <button type="submit" [disabled]="formdata.invalid" > Submit</button>
+
+
+</form>
+</div>
+
+
